@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  background: white;
+
+  .main {
+    height: auto;
+    padding-top: 100px;
+    margin: auto;
+    min-height: 53vh;
+
+    &--nomargin {
+      margin: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: $breakpoints-sm){
+  .wrapper{
+    max-width: 480px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: $breakpoints-md){
+  .wrapper{
+    .main{
+      max-width: 1140px;
+      margin: auto;
+    }
+  }
+}

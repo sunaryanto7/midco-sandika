@@ -1,0 +1,56 @@
+.newsletter {
+  background: var(--color-two);
+  color: white;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+
+  $this: &;
+
+  &_title {
+    color: white;
+    text-align: center;
+  }
+
+  &_content {
+    display: block;
+
+    input {
+      padding: 10px 5px;
+      text-align: center;
+    }
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  &_caption {
+    color: white;
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width: $breakpoints-md){
+  .newsletter {
+    $this: &;
+  
+    &_wrapper{
+      max-width: 1140px;
+      display: flex;
+      margin:auto;
+      justify-content: center;
+      align-items: center;
+      
+      #{$this} {
+        &_title, &_content{
+          flex: 0 0 30%;
+  
+          p{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

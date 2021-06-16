@@ -1,0 +1,33 @@
+.widget {
+  padding: 15px;
+
+  $this: &;
+
+  &_nopadding {
+    padding: 0;
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+
+    #{$this} {
+      &_title {
+        flex: 0 0 70%;
+      }
+
+      &_link {
+        flex: 0 0 30%;
+        text-align: right;
+        font-weight: 400;
+        font-size: 0.8rem;
+        margin: 0;
+      }
+    }
+  }
+
+  &_content {
+    display: block;
+    width: 100%;
+  }
+}

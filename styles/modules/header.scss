@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  max-width: inherit;
+  width: 100%;
+  z-index: 1030;
+  border-bottom: 2px solid #f3f3f3;
+  background: white;
+
+  &_panel {
+    display: block;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    align-items: center;
+
+    .icon {
+      width: 20px;
+      height: auto;
+      fill: black;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .app_name {
+      flex: 0 0 90%;
+      text-align: left;
+
+      h1 {
+        font-size: 1.2rem;
+        color: black;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      img {
+        height: 30px;
+        width: auto;
+      }
+    }
+
+    .minicart {
+      flex: 0 0 10%;
+      align-self: center;
+      text-align: right;
+
+      .shop_icon {
+        width: 24px;
+        height: auto;
+        fill: black;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &_with_navigation {
+    .history_back {
+      flex: 0 0 10%;
+      text-align: left;
+
+      button {
+        padding: 0;
+      }
+      svg{
+        font-size: 18px;
+      }
+    }
+
+    .app_name {
+      flex: 0 0 80%;
+    }
+
+    .minicart {
+      flex: 0 0 10%;
+    }
+  }
+}
+
+
+@media screen and (min-width: $breakpoints-md){
+  .header{
+    &_content{
+      max-width: 1140px;
+      margin: auto;
+      padding: 10px 0;
+    }
+  }
+}

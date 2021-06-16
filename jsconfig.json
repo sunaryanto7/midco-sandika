@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": [
+        "src/store/app/*",
+        "src/store/theme/*",
+      ],
+      "@vendor/*": [
+        "src/store/vendor/*",
+        "vendor/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

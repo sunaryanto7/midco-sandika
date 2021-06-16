@@ -58,3 +58,11 @@
     }
   }
 }
+
+@media screen and (max-width: $breakpoints-md){
+  .footer{
+    &_block{
+      padding:0 15px;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 {
   "lang": "id",
-  "port": "3000",
   "config": {
     "slider": {
       "enable": true,

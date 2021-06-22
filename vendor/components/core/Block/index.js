@@ -3,23 +3,14 @@ import classNames from "classnames";
 import Button from '@vendor/components/commons/Button';
 
 const Block = ({ children, title, additional, className, nopadding }) => {
-
   return (
-    <>
-      <div className={classNames('widget', className, nopadding && 'widget_nopadding')}>
-        {title && (
-          <div className={"widget_header"}>
-            <h4 className={"widget_title"}>{title}</h4>
-            {additional && (
-              <h5 className={"widget_link"}>
-                <Button btnTransparent>{additional}</Button>
-              </h5>
-            )}
-          </div>
-        )}
-        <div className={"widget_content"}>{children}</div>
-      </div>
-    </>
+    <div className={classNames('widget', nopadding && 'widget_nopadding', className )}>
+      {title && <div className={"widget_header"}>
+        <h4 className={"widget_title"}>{title}</h4>
+        {additional && <h5 className={"widget_link"}><Button btnTransparent>{additional}</Button></h5>}
+      </div>}
+      <div className={"widget_content"}>{children}</div>
+    </div>
   );
 };
 

@@ -16,12 +16,12 @@
     background: white;
   }
 
-  &__item {
+  &_item {
     width: 100%;
     padding: 5px 15px;
   }
 
-  &__item_active {
+  &_item_active {
     button {
       background: var(--color-two);
       svg {

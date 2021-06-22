@@ -1,40 +1,38 @@
 {
   "lang": "id",
-  "config": {
-    "slider": {
-      "enable": true,
-      "version": 1,
-      "config": {
-        "imageSlider": {
-          "spaceBetween": 0,
-          "slidesPerView": 1,
-          "navigation": false,
-          "autoplay": true,
-          "delay": 5000,
-          "loop": true
-        },
-        "productSlider": {
-          "spaceBetween": 10,
-          "slidesPerView": 2,
-          "navigation": false,
-          "autoplay": true,
-          "delay": 5000,
-          "loop": true
-        }
-      }
-    },
-    "productMedia": {
-      "enable": true,
-      "version": 1,
-      "config": {
-        "imageSlider": {
-          "spaceBetween": 0,
-          "slidesPerView": 1,
-          "navigation": false,
-          "autoplay": true,
-          "delay": 5000,
-          "loop": true
-        }
+  "slider": {
+    "enable": true,
+    "version": 1,
+    "options": {
+      "imageSlider": {
+        "spaceBetween": 15,
+        "slidesPerView": 1,
+        "navigation": false,
+        "autoplay": true,
+        "delay": 5000,
+        "loop": true
+      },
+      "productSlider": {
+        "spaceBetween": 15,
+        "slidesPerView": 6,
+        "navigation": false,
+        "autoplay": true,
+        "delay": 5000,
+        "loop": true,
+        "breakpoints":{
+          "0": {
+            "slidesPerView": 2,
+            "spaceBetween": 15
+          },
+          "768": {
+            "slidesPerView": 4,
+            "spaceBetween": 15
+          },
+          "1024": {
+            "slidesPerView": 6,
+            "spaceBetween": 15
+          }
+        } 
       }
     }
   },

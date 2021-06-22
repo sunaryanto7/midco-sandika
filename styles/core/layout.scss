@@ -3,6 +3,7 @@
   background: white;
 
   .main {
+    padding:0 15px;
     height: auto;
     padding-top: 100px;
     margin: auto;
@@ -30,7 +31,7 @@
 @media screen and (min-width: $breakpoints-md){
   .wrapper{
     .main{
-      max-width: 1140px;
+      max-width: $max-width;
       margin: auto;
     }
   }

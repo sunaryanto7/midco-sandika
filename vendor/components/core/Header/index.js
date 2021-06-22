@@ -9,43 +9,31 @@ const Header = (props) => {
   const { withAppName, withMinicart, withNavigation, withSearch } = props;
 
   return (
-    <>
-      <div className={"header"}>
-        <div className={"header_panel"}>
-          <GlobalNotification />
-        </div>
-
-        <div className={"header_content"}>
-          {/* Back Navigation */}
-          {withNavigation && (
-            <div className={"history_back"}>
-              <Button
-                btnTransparent
-                onClick={() => {
-                  Router.back();
-                }}>
-                <FontAwesomeIcon icon="arrow-left" />
-              </Button>
-            </div>
-          )}
-
-          {/* App Name */}
-          {withAppName && (
-            <div className={"app_name"}>
-              <img
-                src={'/media/store/logotext.svg'}
-                onClick={() => {
-                  Router.push('/');
-                }}
-              />
-            </div>
-          )}
-
-          {/* Minicart */}
-          {withMinicart && <Quickcart className={"minicart"} />}
-        </div>
+    <div className={"header"}>
+      <div className={"header_panel"}>
+        <GlobalNotification />
       </div>
-    </>
+
+      <div className={"header_content"}>
+        {withNavigation && (
+          <div className={"history_back"}>
+            <Button
+              btnTransparent
+              onClick={() => {
+                Router.back();
+              }}>
+              <FontAwesomeIcon icon="arrow-left" />
+            </Button>
+          </div>)}
+
+        {withAppName && (
+          <div className={"app_name"}>
+            <img src={'/media/store/logotext.svg'} onClick={() => { Router.push('/'); }}/>
+          </div>)}
+
+        {withMinicart && <Quickcart className={"minicart"} />}
+      </div>
+    </div>
   );
 };
 

@@ -22,13 +22,12 @@ const Newsletter = ({ className }) => {
                 name={'newsletter'}
                 id={'newsletter'}
                 value={email}
-                onChange={handleChange}
-              />
+                onChange={handleChange}/>
             </form>
             <p className={"newsletter_caption"}>
               Subscribe to receive new product releases, exclusive discount codes, and newsletters By
               signing up, you are consenting to our privacy policy but you can opt out at any time.
-          </p>
+            </p>
           </div>
         </div>
       </div>

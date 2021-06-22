@@ -3,13 +3,22 @@
 @import './config/vars.scss';
 
 // Components
-@import './components/button.scss';
+@import './commons/button.scss';
 
-// Modules
-@import './modules/layout.scss';
-@import './modules/header.scss';
-@import './modules/footer.scss';
-@import './modules/newsletter.scss';
-@import './modules/copyright.scss';
-@import './modules/quickcart.scss';
-@import './modules/block.scss';
+// core
+@import './core/loader.scss';
+@import './core/navigation.scss';
+@import './core/layout.scss';
+@import './core/globalnotification.scss';
+@import './core/header.scss';
+@import './core/footer.scss';
+@import './core/newsletter.scss';
+@import './core/copyright.scss';
+@import './core/quickcart.scss';
+@import './core/block.scss';
+@import './core/productitem.scss';
+
+@import './widget/banner.scss';
+@import './widget/catalogproduct.scss';
+@import './widget/productslider.scss';
+

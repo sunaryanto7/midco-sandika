@@ -16,19 +16,15 @@ const Category = ({ productCategories }) => {
   const color = ['#f59481', '#fdb46d', '#e18cc9', '#fedd7c'];
 
   return (
-    <>
-      <div className={styles.widget__category}>
-        {categories.map((data, i) => {
-          return (
-            <div className={styles.widget__category__block} key={i}>
-              <div className={styles.widget__category__card} style={{ background: `${color[i]}` }}>
-                <span>{data}</span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </>
+    <div className={styles.widget__category}>
+      {categories.map((data, i) => 
+        <div className={styles.widget__category__block} key={i}>
+          <div className={styles.widget__category__card} style={{ background: `${color[i]}` }}>
+            <span>{data}</span>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

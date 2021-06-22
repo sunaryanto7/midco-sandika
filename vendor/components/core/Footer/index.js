@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 const Footer = ({ className }) => {
   return (
-    <>
       <div className={classNames("footer", className)}>
         <div className={"footer_block"}>
           <div className={"footer_title"}>
@@ -64,9 +63,7 @@ const Footer = ({ className }) => {
             </ul>
           </div>
         </div>
-
       </div>
-    </>
   );
 };
 

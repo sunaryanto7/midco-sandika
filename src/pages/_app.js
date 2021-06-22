@@ -1,4 +1,5 @@
 import '@styles/app.scss';
+import 'swiper/swiper-bundle.css';
 import App from 'next/app'
 import AppContextProvider from '@vendor/environment/context/app';
 import view from '@vendor/sample/config/view.json';

@@ -1,23 +1,14 @@
 import { useContext } from 'react';
 import { PageContext } from '@sandika_environment/context/page';
 
-import Drawer from '@sandika_components/commons/Drawer';
-import Button from '@sandika_components/commons/Button';
-import { InputField } from '@sandika_components/commons/Utilities';
-import Block from '@sandika_components/core/Block';
+import Drawer from '@vendor/components/commons/Drawer';
+import Button from '@vendor/components/commons/Button';
+import { InputField } from '@vendor/components/commons/Utilities';
+import Block from '@vendor/components/core/Block';
 import ArrowBackIcon from '@public/media/icons/back.svg';
-import theme from './searchdrawer.module.scss';
+import classNames from 'classnames';
 
-const SearchDrawer = ({ open, handleClose }) => {
-  const styles = {
-    searchDrawer__header: theme['searchDrawer__header'],
-    searchDrawer__header_content: theme['searchDrawer__header_content'],
-    searchDrawer__navigation: theme['searchDrawer__navigation'],
-    searchDrawer__body: theme['searchDrawer__body'],
-    searchDrawer__item: theme['searchDrawer__item'],
-    drawer__search_form: theme['drawer__search_form']
-  };
-
+const SearchDrawer = ({ open, handleClose, className }) => {
   const { popularSearch } = useContext(PageContext)
 
   const handleChange = (value) => {
@@ -26,18 +17,18 @@ const SearchDrawer = ({ open, handleClose }) => {
 
   return (
     <>
-      <Drawer blank isOpen={open}>
-        <div className={styles.searchDrawer__header}>
-          <div className={styles.searchDrawer__header_content}>
+      <Drawer blank isOpen={open} className={classNames('searchdrawer', className)}>
+        <div className={'searchdrawer_header'}>
+          <div className={'searchdrawer_header--content'}>
             {/* Back Button */}
-            <div className={styles.searchDrawer__navigation}>
+            <div className={'searchdrawer_navigation'}>
               <Button btnWhite onClick={handleClose}>
-                <ArrowBackIcon className={'close__icon'} />
+                <ArrowBackIcon className={'close_icon'} />
               </Button>
             </div>
 
             {/* Search Form */}
-            <div className={styles.drawer__search_form}>
+            <div className={drawer_search_form}>
               <form>
                 <InputField
                   type={'text'}
@@ -52,9 +43,9 @@ const SearchDrawer = ({ open, handleClose }) => {
         </div>
 
         {/* Search Result */}
-        <div className={styles.searchDrawer__body}>
+        <div className={searchdrawer_body}>
           <Block title={'Produk Populer'} additional={'Lihat Semua'} nopadding>
-            {popularSearch.map((item, i) => <span key={i} className={styles.searchDrawer__item}>{item.text}</span>)}
+            {popularSearch.map((item, i) => <span key={i} className={'searchdrawer_item'}>{item.text}</span>)}
           </Block>
         </div>
       </Drawer>
@@ -62,4 +53,4 @@ const SearchDrawer = ({ open, handleClose }) => {
   );
 };
 
-export default React.memo(SearchDrawer);
+export default SearchDrawer;

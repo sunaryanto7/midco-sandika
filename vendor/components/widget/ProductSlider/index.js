@@ -1,39 +1,31 @@
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import ProductItem from '@sandika_components/core/ProductItem';
-import theme from './productslider.module.scss';
+import classNames from 'classnames';
+import ProductItem from '@vendor/components/core/ProductItem';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-const ProductSlider = ({ productData, config }) => {
-  const styles = {
-    swipper__item: theme['swiper__item'],
-    swipper__product_item: theme['swipper__product_item']
-  };
+const ProductSlider = ({ productData, config, className }) => {
 
   return (
-    <Swiper {...config}>
-      {productData.map((data, i) => {
-        return (
-          <SwiperSlide className={styles.swipper__item} key={i}>
-            <ProductItem
-              src={data.image.url}
-              alt={data.image.label}
-              productName={data.name}
-              productPrice={{
-                price_range: data.price_range,
-                price_tiers: data.price_tiers,
-                __typename: data.__typename
-              }}
-              productBrand={data.categories}
-              style={styles.swipper__product_item}
-            />
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <div className={'product_slider'}>
+      <div className={'product_slider--title'}>
+        <h2>Promo</h2>
+      </div>
+      <div className={'product_slider--content'}>
+        <Swiper {...config} className={classNames('swiper_product', className)}>
+          {productData.map((item, i) => 
+            <SwiperSlide className={'swiper_product--item'} key={i}>
+              <ProductItem data={item} key={i}/>
+            </SwiperSlide>
+          )}
+        </Swiper>
+      </div>
+      <div className={'product_slider--action'}>
+        <a href='#' className={'btn btn_primary'}>Lihat Semua</a>
+      </div>
+    </div>
   );
 };
 
-export default React.memo(ProductSlider);
+export default ProductSlider;

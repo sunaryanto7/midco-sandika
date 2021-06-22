@@ -1,11 +1,11 @@
-.searchDrawer__header {
+.searchdrawer_header {
   background: #144270;
   position: absolute;
   z-index: 1;
   width: 100%;
   left: 0;
 
-  .searchDrawer__header_content {
+  .searchdrawer_header--content {
     max-width: 480px;
     margin: auto;
     padding: 10px;
@@ -13,7 +13,7 @@
     justify-content: start;
     align-items: center;
 
-    .searchDrawer__navigation {
+    .searchdrawer_navigation {
       flex: 0 0 15%;
 
       button {
@@ -21,7 +21,7 @@
       }
     }
 
-    .drawer__search_form {
+    .drawer_search_form {
       flex: 0 0 70%;
       text-align: center;
 
@@ -35,12 +35,12 @@
   }
 }
 
-.searchDrawer__body {
+.searchdrawer_body {
   padding-top: 60px;
   padding-left: 15px;
   padding-right: 15px;
 
-  .searchDrawer__item{
+  .searchdrawer_item{
     background: var(--color-one);
     margin-right: 10px;
     margin-bottom: 10px;

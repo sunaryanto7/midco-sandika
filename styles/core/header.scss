@@ -83,9 +83,8 @@
 @media screen and (min-width: $breakpoints-md){
   .header{
     &_content{
-      max-width: 1140px;
+      max-width: $max-width;
       margin: auto;
-      padding: 10px 0;
     }
   }
 }

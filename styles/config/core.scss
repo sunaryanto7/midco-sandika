@@ -99,3 +99,22 @@ input {
 #__next {
   background: #eaeaea;
 }
+
+.btn{
+  padding: 6px 25px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  font-size: 0.875rem;
+  border-radius: 5px;
+
+  &_primary{
+    background: rgb(210, 36, 30);
+    color: white;
+
+    &:hover{
+      background: rgb(122, 11, 7);
+    }
+  }
+}

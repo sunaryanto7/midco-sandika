@@ -1,0 +1,4 @@
+.next
+.prettierignore
+dist
+node_modules/

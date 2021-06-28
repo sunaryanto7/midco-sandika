@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "rules": {}
+}

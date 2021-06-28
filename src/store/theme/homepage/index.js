@@ -5,8 +5,9 @@ import Layout from '@vendor/components/core/Layout';
 import Banner from '@vendor/components/widget/Banner';
 import CatalogProduct from '@vendor/components/widget/CatalogProduct';
 import ProductSlider from '@vendor/components/widget/ProductSlider';
+import FeaturedProducts from '@vendor/components/pages/homepage/FeaturedProducts'
 
-const Homepage = ({banner, products}) => {
+const Homepage = ({banner, products, featuredImages}) => {
   const { 
     slider:{ options:{ imageSlider, productSlider }},
     page:{ home:{ layout }} 
@@ -20,7 +21,7 @@ const Homepage = ({banner, products}) => {
       <Layout {...layout}>
         <Banner config={imageSlider} images={banner}/>
         <ProductSlider config={productSlider} productData={products}/>
-        <CatalogProduct productData={products}/>
+        <FeaturedProducts images={featuredImages}/>
       </Layout>
     </>
   );

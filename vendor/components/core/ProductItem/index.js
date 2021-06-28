@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const ProductItem = ({data, className}) => {
+const ProductItem = ({ data, className }) => {
 
   const productNameSplit = () => {
     if (data.title && data.title.split(' ').length > 4) { return data.title.split(' ').splice(0, 7).join(' ') + '...'; }
@@ -20,7 +20,7 @@ const ProductItem = ({data, className}) => {
           <span className={"product_discount"}>{'10%'}</span>
           <span className={"product_brand"}>{data.category}</span>
         </span>
-        <h5 className={"product_name"}>{trimedProductName}</h5>
+        <p className={"product_name"}>{trimedProductName}</p>
         <span className={"product_price"}>{`Rp, ${data.price}`}</span>
       </div>
     </div>

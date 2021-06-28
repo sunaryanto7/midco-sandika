@@ -1,4 +1,4 @@
-.product_slider{
+.product-slider{
   margin: 40px 0;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 
 
 @media screen and (max-width: $breakpoints-sm){
-  .product_slider{
+  .product-slider{
     padding:15px 0;
     box-shadow: none;
     border:none;

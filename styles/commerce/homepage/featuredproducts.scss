@@ -1,0 +1,37 @@
+.featured-products{
+    margin-bottom: 40px;
+    
+    .odd, .even{
+        display: flex;
+        
+        .featured-images, 
+        .featured-text{
+            flex: 0 0 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .featured-images img{
+            display: block;
+        }
+        .featured-text{
+            text-align: center;
+            padding:15px;
+
+            p {
+                font-size: 14px;
+                color: black;
+                line-height: 1.1rem;
+            }
+        }
+    }
+
+    .odd{
+        flex-direction: row;
+    }
+
+    .even{
+        flex-direction: row-reverse;
+    }
+}

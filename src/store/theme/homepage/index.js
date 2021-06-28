@@ -3,13 +3,13 @@ import Head from 'next/head'
 import { AppContext } from '@vendor/environment/context/app';
 import Layout from '@vendor/components/core/Layout';
 import Banner from '@vendor/components/widget/Banner';
-import CatalogProduct from '@vendor/components/widget/CatalogProduct';
 import ProductSlider from '@vendor/components/widget/ProductSlider';
+import FeaturedProducts from '@vendor/components/commerce/homepage/FeaturedProducts';
 
-const Homepage = ({banner, products}) => {
-  const { 
-    slider:{ options:{ imageSlider, productSlider }},
-    page:{ home:{ layout }} 
+const Homepage = ({ bannerImages, featuredImages, products }) => {
+  const {
+    slider: { options: { imageSlider, productSlider } },
+    page: { home: { layout } }
   } = useContext(AppContext);
 
   return (
@@ -18,9 +18,9 @@ const Homepage = ({banner, products}) => {
         <title>Midco Sandika</title>
       </Head>
       <Layout {...layout}>
-        <Banner config={imageSlider} images={banner}/>
-        <ProductSlider config={productSlider} productData={products}/>
-        <CatalogProduct productData={products}/>
+        <Banner config={imageSlider} images={bannerImages} />
+        <ProductSlider config={productSlider} productData={products} />
+        <FeaturedProducts images={featuredImages} />
       </Layout>
     </>
   );

@@ -29,10 +29,11 @@
 
     .product_name {
       line-height: 1.1rem;
-      font-weight: 400;
-      font-size: 12px;
+      font-weight: 500;
+      font-size: 14px;
       margin-top: 10px;
       margin-bottom: 5px;
+      color: black;
     }
 
     .product_discount {
@@ -55,7 +56,7 @@
     }
 
     .product_price {
-      position: absolute;
+      // position: absolute;
       bottom: 15px;
       left: 0;
       font-weight: 600;

@@ -13,7 +13,7 @@ const ProductItem = ({ data, className }) => {
   return (
     <div className={classNames("product_item", className)}>
       <div className={"product_image"}>
-        <img src={data.image} alt={"alt"} />
+        <img src={`https://thumbor.sirclocdn.com/unsafe/240x300/filters:format(webp)/${data.image}`} alt={"alt"} />
       </div>
       <div className={"product_description"}>
         <span>

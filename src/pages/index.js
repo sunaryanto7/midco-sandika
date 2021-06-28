@@ -2,13 +2,13 @@ import Homepage from '@app/homepage';
 
 const mainBannerImages = [
 	{
-		mobile: "https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner-02.jpg",
-		desktop: "https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner_comp_.jpg",
+		mobile: "https://thumbor.sirclocdn.com/unsafe/1800x750/filters:format(webp)/https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner-02.jpg",
+		desktop: "https://thumbor.sirclocdn.com/unsafe/1800x750/filters:format(webp)/https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner_comp_.jpg",
 		alt: "Surprise Deals December"
 	},
 	{
-		mobile: "https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner-02.jpg",
-		desktop: "https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner_comp_.jpg",
+		mobile: "https://thumbor.sirclocdn.com/unsafe/1800x750/filters:format(webp)/https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner-02.jpg",
+		desktop: "https://thumbor.sirclocdn.com/unsafe/1800x750/filters:format(webp)/https://exsport.co.id/media/weltpixel/owlcarouselslider/images/1/_/1._exsport-main_banner_comp_.jpg",
 		alt: "Surprise Deals December"
 	},
 ];

@@ -1,5 +1,4 @@
 const FeaturedProducts = ({ images }) => {
-	console.log(images)
 	return (
 		<div className={"featured-products"}>
 			{images.map((image, i) => (

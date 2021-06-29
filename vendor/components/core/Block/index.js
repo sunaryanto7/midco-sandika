@@ -4,7 +4,7 @@ import Button from '@vendor/components/commons/Button';
 
 const Block = ({ children, title, additional, className, nopadding }) => {
   return (
-    <div className={classNames('widget', nopadding && 'widget_nopadding', className )}>
+    <div className={classNames('widget', nopadding && 'widget_nopadding', className)}>
       {title && <div className={"widget_header"}>
         <h4 className={"widget_title"}>{title}</h4>
         {additional && <h5 className={"widget_link"}><Button btnTransparent>{additional}</Button></h5>}

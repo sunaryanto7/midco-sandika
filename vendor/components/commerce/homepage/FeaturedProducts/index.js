@@ -11,6 +11,7 @@ const FeaturedProducts = ({ images }) => {
 						</picture>
 					</div>
 					<div className={"featured-text"}>
+						<h3>Featured Products</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipiscing elit duis,
 							rutrum congue blandit placerat tempus leo mi, id elementum

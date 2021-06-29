@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Head from 'next/head'
 import { AppContext } from '@vendor/environment/context/app';
+import Block from '@vendor/components/core/Block';
 import Layout from '@vendor/components/core/Layout';
 import Banner from '@vendor/components/widget/Banner';
 import ProductSlider from '@vendor/components/widget/ProductSlider';
@@ -18,9 +19,15 @@ const Homepage = ({ bannerImages, featuredImages, products }) => {
         <title>Midco Sandika</title>
       </Head>
       <Layout {...layout}>
-        <Banner config={imageSlider} images={bannerImages} />
-        <ProductSlider config={productSlider} productData={products} />
-        <FeaturedProducts images={featuredImages} />
+        <Block>
+          <Banner config={imageSlider} images={bannerImages} />
+        </Block>
+        <Block>
+          <ProductSlider config={productSlider} productData={products} />
+        </Block>
+        <Block>
+          <FeaturedProducts images={featuredImages} />
+        </Block>
       </Layout>
     </>
   );

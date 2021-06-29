@@ -10,6 +10,7 @@
             align-items: center;
             justify-content: center;
             display: flex;
+            flex-direction: column;
         }
 
         .featured-images img{
@@ -33,5 +34,13 @@
 
     .even{
         flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width: $breakpoints-sm){
+    .featured-products{
+        .odd, .even{
+            flex-direction: column;
+        }
     }
 }
